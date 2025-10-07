@@ -18,26 +18,36 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (state  == GameState.GAMEPLAY)
-        {
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                Debug.Log("Pressed esc one");
-                state = GameState.PAUSE;
-                hasChangedState = true;
-            }
-        }
-        else if (state == GameState.PAUSE)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Debug.Log("Pressed esc two");
-                state = GameState.GAMEPLAY;
-                hasChangedState = true;
-            
-            }
 
+        switch (state)
+        {
+            case GameState.GAMEPLAY:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    Debug.Log("Pressed esc one");
+                    state = GameState.PAUSE;
+                    hasChangedState = true;
+                }
+
+                break;
+
+            case GameState.PAUSE:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    Debug.Log("Pressed esc two");
+                    state = GameState.GAMEPLAY;
+                    hasChangedState = true;
+                }
+
+                break;
+
+            default:
+
+                break;
         }
+
     }
 
     private void LateUpdate()
