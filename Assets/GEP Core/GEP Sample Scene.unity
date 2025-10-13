@@ -3746,12 +3746,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3893294198232250022}
   - component: {fileID: 6982812146656947420}
+  - component: {fileID: 6982812146656947421}
   - component: {fileID: 4416926081400482838}
   - component: {fileID: 4416926081400482839}
   - component: {fileID: 5885216827725006572}
   - component: {fileID: 135756641816440928}
   - component: {fileID: 4416926081400482832}
-  - component: {fileID: 6982812146656947421}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -4903,7 +4903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80c1e4b524a97c4ebeda7f31cc6f089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 430416164}
   items: []
 --- !u!1 &7010426346730695968
 GameObject:
