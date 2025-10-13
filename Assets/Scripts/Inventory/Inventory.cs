@@ -6,10 +6,10 @@ using Unity.VisualScripting;
 public class Inventory : MonoBehaviour
 {
     [Header("Game Manager")]
-    public GameManager gameManager;
+    [SerializeField] private GameManager gameManager;
 
     [Header("Inventory")]
-    public List<string> items = new List<string>();
+    [SerializeField] private List<string> items = new List<string>();
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
