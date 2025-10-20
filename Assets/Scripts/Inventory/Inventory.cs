@@ -21,7 +21,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+       /* if (Input.GetKeyDown(KeyCode.E))
         {
            AddItemToInventory("Generic Item");
         }
@@ -29,7 +29,7 @@ public class Inventory : MonoBehaviour
         {
             RemoveItemFromInventory("Generic Item");
         }
-
+       */
     }
 
     public void AddItemToInventory (string itemName)
@@ -40,6 +40,18 @@ public class Inventory : MonoBehaviour
     public void RemoveItemFromInventory (string itemName)
     {  
         items.Remove(itemName);
+    }
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        ItemObject collisionItem = hit.gameObject.GetComponent<ItemObject>();
+
+        if (collisionItem != null)
+        {
+            items.Add(collisionItem.name);
+            Destroy(collisionItem.gameObject);
+        }
+
     }
 
 
