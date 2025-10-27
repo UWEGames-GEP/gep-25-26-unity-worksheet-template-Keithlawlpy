@@ -21,15 +21,10 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-           AddItemToInventory("Generic Item");
+           SortInventory();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            RemoveItemFromInventory("Generic Item");
-        }
-       */
     }
 
     public void AddItemToInventory (string itemName)
@@ -54,6 +49,12 @@ public class Inventory : MonoBehaviour
 
     }
 
+    public void SortInventory()
+    {
+      items.Sort();
 
+
+
+    }
 
 }
