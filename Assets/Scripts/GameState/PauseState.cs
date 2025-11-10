@@ -15,10 +15,7 @@ public class PauseState : BaseGameState
 
     public override void UpdateState()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            gameManager.ChangeState(new PlayState(gameManager));
-        }
+        
     }
 
     public override void ExitState()

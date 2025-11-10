@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        currentState.UpdateState();
+
+
     }
 
     public void ChangeState(BaseGameState newState)
@@ -27,4 +28,15 @@ public class GameManager : MonoBehaviour
         currentState.EnterState();
     }
 
+    public void TogglePause()
+    {
+        if (currentState is PlayState)
+        {
+            ChangeState(new PauseState(this));
+        }
+        else if (currentState is PauseState)
+        {
+            ChangeState(new PlayState(this));
+        }
+    }
 }
