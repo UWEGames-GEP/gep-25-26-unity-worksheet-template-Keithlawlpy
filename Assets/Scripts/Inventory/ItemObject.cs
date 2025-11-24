@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class ItemObject : MonoBehaviour
 {
 
@@ -9,7 +8,8 @@ public class ItemObject : MonoBehaviour
     public enum RarityType 
     { Common, Uncommon, Rare, Epic, Legendary }
 
-
+    [Header("Item Info")]
+    public string itemName;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
