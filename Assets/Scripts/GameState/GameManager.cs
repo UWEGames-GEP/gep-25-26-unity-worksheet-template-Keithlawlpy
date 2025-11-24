@@ -4,7 +4,7 @@ using UnityEngine.XR;
 
 public class GameManager : MonoBehaviour
 {
-    private BaseGameState currentState;
+    public BaseGameState currentState;
 
     void Start()
     {
