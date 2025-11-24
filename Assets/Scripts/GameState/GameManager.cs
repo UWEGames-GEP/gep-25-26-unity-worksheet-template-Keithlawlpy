@@ -5,6 +5,7 @@ using UnityEngine.XR;
 public class GameManager : MonoBehaviour
 {
     public BaseGameState currentState;
+    public GameObject GameUI;
 
     void Start()
     {

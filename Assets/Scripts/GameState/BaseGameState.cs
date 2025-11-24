@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Serializable]   
 public abstract class BaseGameState
 {
     protected GameManager gameManager;
@@ -12,5 +13,6 @@ public abstract class BaseGameState
     public virtual void EnterState() { }
     public virtual void UpdateState() { }
     public virtual void ExitState() { }
+    public virtual void LateUpdate() { }
 
 }

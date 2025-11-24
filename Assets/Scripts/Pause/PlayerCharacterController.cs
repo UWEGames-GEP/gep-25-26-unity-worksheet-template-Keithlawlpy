@@ -10,11 +10,11 @@ public class PlayerCharcterController : ThirdPersonController
         if (value.isPressed)
         {
             Debug.Log("Pause Toggled");
-            /*var gm = Object.FindFirstObjectByType<GameManager>();
+            var gm = Object.FindFirstObjectByType<GameManager>();
             if (gm != null)
             {
                 gm.TogglePause();
-            }*/
+            }
             
         }
     }
