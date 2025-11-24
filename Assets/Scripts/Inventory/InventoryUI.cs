@@ -34,7 +34,7 @@ public class InventoryUI
             }
         }
     }
-    /*
+    
     public void RemoveItemFromInventory(int i)
     {
         if (i < items.Count)
@@ -48,5 +48,5 @@ public class InventoryUI
         inventory.RemoveItemFromInventory(i);
         RefreshInventory();
     }
-    */
+    
 }
