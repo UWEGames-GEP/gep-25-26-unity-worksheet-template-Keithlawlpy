@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor.Search;
 
-public class InventoryUI
+public class InventoryUI : MonoBehaviour
 {
     public Inventory inventory;
     public List<GameObject> inventoryUIButtons = new List<GameObject>();
@@ -37,15 +37,15 @@ public class InventoryUI
     
     public void RemoveItemFromInventory(int i)
     {
-        if (i < items.Count)
+        if (i < inventory.items.Count)
         {
-            RemoveItemFromInventory(items[i]);
+            inventory.RemoveItemFromInventory(inventory.items[i]);
         }
     }
 
     public void OnInventoryUIButton(int i)
     {
-        inventory.RemoveItemFromInventory(i);
+        inventory.RemoveItemFromInventory(inventory.items[i]);
         RefreshInventory();
     }
     
