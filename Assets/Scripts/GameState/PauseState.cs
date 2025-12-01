@@ -30,6 +30,6 @@ public class PauseState : BaseGameState
 
     public override void ExitState()
     {
-        Debug.Log("Exiting Pause State");
+        
     }
 }

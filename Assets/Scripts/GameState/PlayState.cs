@@ -28,6 +28,6 @@ public class PlayState : BaseGameState
 
     public override void ExitState()
     {
-        Debug.Log("Exiting Play State");
+        
     }
 }
